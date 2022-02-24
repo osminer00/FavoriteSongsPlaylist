@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<h1>Your Playlist: </h1>
+	<h1>Your Songs: </h1>
 	<form method = "post" action = "navigationServlet">
 		<table>
 			<c:forEach items = "${requestScope.allSongs}" var="currentSong">
