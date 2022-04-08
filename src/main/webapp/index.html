@@ -3,12 +3,33 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Playlist Creator</title>
+<script>
+	function basicValidation(){
+		if (document.song.name.value ==""){
+			document.song.name.focus();
+			alert("You must enter a song name");
+			return false;
+		}
+		if (document.song.artist.value ==""){
+			document.song.artist.focus();
+			alert("You must enter a artist");
+			return false;
+		}
+		if (document.song.genre.value ==""){
+			document.song.genre.focus();
+			alert("You must enter a genre");
+			return false;
+		}
+		
+	}
+
+</script>
 </head>
 <body>
 
 	<h1>Welcome to Your Playlist Manager </h1>
 	<h3>Enter Details for a New Song Below: </h3>
-	<form action = "newSongServlet" method = "post">
+	<form action = "newSongServlet" method = "post" name ="song" onsubmit = "return(basicValidation())">
 	
 	Song Name: <input type = "text" name = "name">
 	Artist: <input type = "text" name = "artist">
